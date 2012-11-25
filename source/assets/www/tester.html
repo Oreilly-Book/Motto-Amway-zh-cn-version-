@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=320; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>RemarkPointer</title>
+      <link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title">
+      <script type="text/javascript" charset="utf-8" src="cordova-1.7.0rc1.js"></script>
+      
+
+  </head>
+<body onload="test01()">
+<script type="text/javascript">
+var test01 = function(){
+	//alert("js invoked");
+var success = function(data){ //当Java方法返回成功时，通过data.key 获得Java中传来的JSONObject数据
+                var ret=data.mottos;//"1111111 : " + data.testData1 + '   and 2222222 : ' + data.testData2;
+                //var titles="";
+                //for(var i=0;i<ret.length;i++)
+                //	{
+                //		titles+="<div>"+ret[i]+"</div>";
+                //	}
+				if(ret)
+                {
+                var types=ret.split("|*|");var title="";var con="";
+                for(var i=0;i<types.length;i++)
+                	{
+                		var te=types[i].split("|+|");
+                		title+="<div>"+te[1];
+                		con+="<div>"+te[1];
+                		if(te[2])
+                		{
+						var tec=te[2].split("||");
+                		for(var y=0;y<tec.length;y++)
+                			{
+                				con+="<dd>"+tec[y].split("|-|")[1];
+                				con+="</dd>";
+                			}
+                		};
+                		title+="</div>";
+                		con+="</div>";
+                	}
+                };                
+                document.getElementById("div-con").innerHTML=title;//data.mottos;
+                document.getElementById("div-con").innerHTML+="<div></div>"+con;
+                document.getElementById("div-con").innerText+=title;
+                //alert(data);
+            };
+              
+var error = function(e){
+                alert(e);
+            };
+ 
+window.plugins.JTester.tester(success, error, "first testor data", "second tester data");
+//"first test data", "second test data"是向Java传递的参数
+}
+</script>
+
+<button type="button" onclick="test01()">Click Me!</button>
+
+<div id="div-con">::</div>
+</body></html>
