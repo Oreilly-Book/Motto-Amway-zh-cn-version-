@@ -14,7 +14,7 @@
 	    android:smallScreens="true" 
 	    android:resizeable="true" 
 	    android:anyDensity="true"/>
-	<uses-permission android:name="android.permission.CAMERA" />
+	<!--uses-permission android:name="android.permission.CAMERA" />
 	<uses-permission android:name="android.permission.VIBRATE" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -34,7 +34,7 @@
 	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
 	<uses-permission android:name="android.permission.BROADCAST_STICKY" />
 	
-	<uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
+	<uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" /-->
 	<!--  uses-permission android:name="android.permission.BIND_APPWIDGET" />
 	<uses-permission android:name="android.permission.BIND_DEVICE_ADMIN" />
 	<uses-permission android:name="android.permission.BIND_INPUT_METHOD" />
@@ -42,6 +42,8 @@
 	<uses-permission android:name="android.permission.BIND_TEXT_SERVICE" />
 	<uses-permission android:name="android.permission.BIND_VPN_SERVICE" />
 	<uses-permission android:name="android.permission.BIND_WALLPAPER" /-->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.WRITE_SOCIAL_STREAM" />
 	<uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
     <application

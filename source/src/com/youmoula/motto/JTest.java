@@ -71,7 +71,7 @@ public class JTest extends Plugin{
 		
 		StringBuilder strSql=new StringBuilder();
 		strSql.append("select MTYPE_ID,MTYPE_NAME from MOTTO_TYPE ");
-		strSql.append(" where IS_DELETED=0 and MTYPE_ISROOT=1 GROUP BY MTYPE_NAME ");
+		strSql.append(" where IS_DELETED=0 and MTYPE_ISROOT=1 GROUP BY MTYPE_NAME ORDER BY MTYPE_ID ");
 		//Log.e("table1", "select");
 		c=database.rawQuery(strSql.toString(), null);
 		
@@ -91,7 +91,7 @@ public class JTest extends Plugin{
 			
 			StringBuilder strSql2=new StringBuilder();
 			strSql2.append("select MOTTO_ID,MOTTO_CON from MOTTO_CON ");
-			strSql2.append(" where MTYPE_ID="+c.getInt(0)+" and IS_DELETED=0 ");
+			strSql2.append(" where MTYPE_ID="+c.getInt(0)+" and IS_DELETED=0 ORDER BY MOTTO_ID");
 			cc=database.rawQuery(strSql2.toString(),null);
 			
 			cc.moveToFirst();
