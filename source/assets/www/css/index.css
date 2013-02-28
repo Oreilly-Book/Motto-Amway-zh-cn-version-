@@ -37,7 +37,7 @@ body {
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:16px;
+    font-size:20pt;
     height:100%;
     margin:0px;
     padding:0px;
@@ -81,11 +81,11 @@ a,a:visited{
                                       /* offset horizontal: half of image width and text area width */
     }
 }
-h1,div,span,em,p{
+h1,div,span,dp,p{
 	text-align:left;
 }
 .mottocon{
-	margin-bottom:5em;
+	margin-bottom:5px;
 }
 h1 a,h1 a:hover,h1 a:visited{
  font-size:18px;	
@@ -104,7 +104,7 @@ h1 a,h1 a:hover,h1 a:visited{
     border-radius:4px;
     -webkit-border-radius:4px;
     color:#FFFFFF;
-    font-size:16px;
+    font-size:11pt;
     margin:0px 30px;
     padding:2px 0px;
 }
